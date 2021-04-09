@@ -7189,11 +7189,18 @@ a.text-dark:hover, a.text-dark:focus {
 /****** Sass Examples ******/
 section.row h2 {
   background: #CC2522;
-  color: #E8AE02; }
+  color: #FDFFFC; }
 
-section.row p {
+section.row p.example {
   background: #995F4C;
-  color: #E8AE02; }
+  color: #FDFFFC; }
+
+.nav {
+  font-size: larger; }
+  .nav li:hover {
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); }
 
 body {
   background: black; }
@@ -7203,13 +7210,6 @@ header {
 
 main {
   background: gray; }
-
-.nav {
-  font-size: larger; }
-  .nav li:hover {
-    -webkit-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    transform: rotate(10deg); }
 
 h3,
 h5 {

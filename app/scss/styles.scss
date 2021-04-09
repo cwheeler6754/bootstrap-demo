@@ -8,10 +8,17 @@ $goldenrod: #E8AE02;
 $lava: #CC2522;
 $redwood: #995F4C;
 $steelteal: #548687;
+$powder: #FDFFFC;
 
 //Mixins
 @mixin color () {
-  color: $goldenrod;
+  color: $powder;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }
 
 //Nesting
@@ -20,7 +27,7 @@ section.row {
     background: $lava;
     @include color();
   }
-  p.ex-p {
+  p.example {
     background: $redwood;
     @include color();
   }
@@ -33,13 +40,6 @@ section.row {
     @include transform(rotate(10deg));
   }
 }
-
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
-
 
 body {
   background: black;
