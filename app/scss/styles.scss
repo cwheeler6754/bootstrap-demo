@@ -59,7 +59,7 @@ h5 {
 }
 
 p {
-  color: white;
+
   font-size: larger;
 }
 
@@ -77,4 +77,77 @@ footer {
 
 .img-fluid {
   border: 6px solid $info;
+}
+
+
+/*** MODULE 14 ***/
+
+/*** EXTEND/INHERITANCE  ***/
+
+.extendFrom {
+  color: #e04048;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+}
+
+.extend {
+  @extend .extendFrom;
+  color: turquoise;
+}
+
+/*** OPERATOR ***/
+
+.operatorOne {
+  font-size: 15px;
+  @extend .extend;
+}
+
+.operatorTwo {
+  font-size: 15px + 5;
+  @extend .extendFrom;
+}
+
+/*** INTERPOLATION ***/
+
+@mixin inline-animation($duration) {
+  $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+}
+
+.interpolation {
+  font-size: 20px;
+  color: #e04048;
+  @include inline-animation(2s) {
+    from { background-color: white }
+    to { background-color: darkgray }
+  }
+}
+
+/*** CHOICE --- Mix Color Function ***/
+
+$color1: #ee82ee;
+$color2: #ffa500;
+
+.color1 {
+  background: $color1;
+  color: white;
+}
+
+.color2 {
+  background: $color2;
+  color: white;
+}
+
+.choice {
+  font-size: 15px;
+  color: white;
+  background: mix($color1, $color2);
 }

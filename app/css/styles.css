@@ -7216,7 +7216,6 @@ h5 {
   color: white; }
 
 p {
-  color: white;
   font-size: larger; }
 
 .carousel-inner img {
@@ -7230,3 +7229,49 @@ footer {
 
 .img-fluid {
   border: 6px solid #17a2b8; }
+
+/*** MODULE 14 ***/
+/*** EXTEND/INHERITANCE  ***/
+.extendFrom, .extend, .operatorOne, .operatorTwo {
+  color: #e04048;
+  font-size: 20px;
+  text-align: center;
+  background: white; }
+
+.extend, .operatorOne {
+  color: turquoise; }
+
+/*** OPERATOR ***/
+.operatorOne {
+  font-size: 15px; }
+
+.operatorTwo {
+  font-size: 20px; }
+
+/*** INTERPOLATION ***/
+.interpolation {
+  font-size: 20px;
+  color: #e04048;
+  animation-name: inline-u3a3da6fd;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+@keyframes inline-u3a3da6fd {
+  from {
+    background-color: white; }
+  to {
+    background-color: darkgray; } }
+
+/*** CHOICE --- Mix Color Function ***/
+.color1 {
+  background: #ee82ee;
+  color: white; }
+
+.color2 {
+  background: #ffa500;
+  color: white; }
+
+.choice {
+  font-size: 15px;
+  color: white;
+  background: #f79477; }
